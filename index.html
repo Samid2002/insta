@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #000; /* Dark background to make stylish text pop */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* --- STYLISH GRADIENT TEXT --- */
+        .welcome-text {
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            /* Instagram Gradient Colors */
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .sub-text {
+            font-size: 1.5rem;
+            color: #fff;
+            font-style: italic;
+            font-weight: 300;
+            opacity: 0.8;
+            display: block;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        /* --- GLOWING BUTTON --- */
+        .follow-btn {
+            background: linear-gradient(45deg, #f09433, #bc1888);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(188, 24, 136, 0.5);
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .follow-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 25px rgba(188, 24, 136, 0.8);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Entrance Animation */
+        .container {
+            animation: zoomIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <span class="welcome-text">Welcome to my profile</span>
+        <span class="sub-text">follow kardo yar </span>
+        
+        <a href="https://instagram.com/mr.sailent_soul_" class="follow-btn">Follow Me</a>
+    </div>
+
+</body>
+</html>
